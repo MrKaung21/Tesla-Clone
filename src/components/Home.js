@@ -7,20 +7,46 @@ const Home = () => {
     <Container>
         <Section 
             title="Model 3"
-            bgimage="model-3.jpg" 
+            description='Order Online for Touchless Delivery'
+            bgimage="model-3.jpg"
+            leftbtntext="Custom Order"
+            rightbtntext="Exsiting Inventory" 
             downArrow="./images/down-arrow.svg"
         />
         <Section 
             title="Model Y"
-            bgimage="model-y.jpg"  
+            description='Order Online for Touchless Delivery'
+            bgimage="model-y.jpg" 
+            leftbtntext="Custom Order"
+            rightbtntext="Exsiting Inventory" 
         />
         <Section 
             title="Model S"
-            bgimage="model-s.jpg"  
+            description='Order Online for Touchless Delivery'
+            bgimage="model-s.jpg"
+            leftbtntext="Custom Order"
+            rightbtntext="Exsiting Inventory"  
         />
         <Section 
             title="Model X"
-            bgimage="model-x.jpg"  
+            description='Order Online for Touchless Delivery'
+            bgimage="model-x.jpg"
+            leftbtntext="Custom Order"
+            rightbtntext="Exsiting Inventory"  
+        />
+        <Section 
+            title="Solar Panels"
+            description="Lowest Cost Solar Panels in America"
+            bgimage="solar-panel.jpg"
+            leftbtntext="Order Now"
+            rightbtntext="Learn More"
+        />
+        <Section 
+            title="Solar Roof"
+            description="Produce Clean Energy From Your Roof"
+            bgimage="solar-roof.jpg"
+            leftbtntext="Order Now"
+            rightbtntext="Learn More"
         />
     </Container>
   )

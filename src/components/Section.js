@@ -1,20 +1,20 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const Section = ({ title, bgimage, downArrow }) => {
+const Section = ({ title, bgimage, downArrow, leftbtntext, rightbtntext, description }) => {
   return (
     <MainSection bgimage={bgimage}>
         <MainTitle>
             <h1>{title}</h1>
-            <p>Order Online for Touchless Delivery</p>
+            <p>{description}</p>
         </MainTitle>
         <Buttons>
             <ButtonGroup>
                 <LeftButton>
-                    Custom Order
+                    {leftbtntext}
                 </LeftButton>
                 <RightButton>
-                    Existing Inventory
+                    {rightbtntext}
                 </RightButton>
             </ButtonGroup>
             <DownArrow src={downArrow}></DownArrow>
@@ -31,11 +31,16 @@ const MainSection = styled.div`
     background: ${props => `url('./images/${props.bgimage}')`};
     background-position: center;
     background-size: cover;
+    background-repeat: no-repeat;
 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+
+    h1 {
+        padding-bottom: 10px;
+    }
     
 `
 const MainTitle = styled.div`
@@ -47,6 +52,7 @@ const ButtonGroup = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    
 `
 
 const LeftButton = styled.div`
@@ -72,7 +78,7 @@ const RightButton = styled(LeftButton)`
 `
 
 const DownArrow = styled.img`
-    margin: 30px 0; 
+    margin-top: 20px;
     height: 40px;
     opacity: 0.85;
     animation: downArrow infinite 1.5s;
@@ -82,4 +88,6 @@ const Buttons = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    margin-top: 25px;
 `
