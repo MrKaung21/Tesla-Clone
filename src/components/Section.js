@@ -13,9 +13,11 @@ const Section = ({ title, bgimage, downArrow, leftbtntext, rightbtntext, descrip
                 <LeftButton>
                     {leftbtntext}
                 </LeftButton>
-                <RightButton>
-                    {rightbtntext}
-                </RightButton>
+                { rightbtntext &&
+                    <RightButton>
+                        {rightbtntext}
+                    </RightButton>
+                }
             </ButtonGroup>
             <DownArrow src={downArrow}></DownArrow>
         </Buttons>
@@ -53,6 +55,9 @@ const ButtonGroup = styled.div`
     justify-content: center;
     align-items: center;
     
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+    }
 `
 
 const LeftButton = styled.div`
@@ -65,7 +70,7 @@ const LeftButton = styled.div`
     justify-content: center;
     align-items: center;
     border-radius: 100px;
-    opacity: 0.85;
+    opacity: 0.9;
     text-transform: uppercase;
     font-size: 12px;
     cursor: pointer;
@@ -79,8 +84,10 @@ const RightButton = styled(LeftButton)`
 
 const DownArrow = styled.img`
     margin-top: 20px;
+    margin-bottom: 10px;
     height: 40px;
     opacity: 0.85;
+    cursor: pointer;
     animation: downArrow infinite 1.5s;
 `
 

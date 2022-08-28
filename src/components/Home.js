@@ -48,6 +48,12 @@ const Home = () => {
             leftbtntext="Order Now"
             rightbtntext="Learn More"
         />
+        <Section 
+            title="Assessories"
+            description=""
+            bgimage="accessories.jpg"
+            leftbtntext="Shop Now"
+        />
     </Container>
   )
 }
