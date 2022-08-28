@@ -1,25 +1,34 @@
 import React from 'react'
 import styled from 'styled-components'
+import Fade from 'react-reveal/Fade'
 
 const Section = ({ title, bgimage, downArrow, leftbtntext, rightbtntext, description }) => {
   return (
     <MainSection bgimage={bgimage}>
-        <MainTitle>
-            <h1>{title}</h1>
-            <p>{description}</p>
-        </MainTitle>
+        <Fade bottom>
+            <MainTitle>
+                <h1>{title}</h1>
+                <p>{description}</p>
+            </MainTitle>
+        </Fade>
         <Buttons>
             <ButtonGroup>
-                <LeftButton>
-                    {leftbtntext}
-                </LeftButton>
-                { rightbtntext &&
-                    <RightButton>
-                        {rightbtntext}
-                    </RightButton>
-                }
+                <Fade left>
+                    <LeftButton>
+                        {leftbtntext}
+                    </LeftButton>
+                </Fade>
+                <Fade right>
+                    { rightbtntext &&
+                        <RightButton>
+                            {rightbtntext}
+                        </RightButton>
+                    }
+                </Fade>
             </ButtonGroup>
-            <DownArrow src={downArrow}></DownArrow>
+            <Fade top>
+                <DownArrow src={downArrow}></DownArrow>
+            </Fade>
         </Buttons>
     </MainSection>
   )
@@ -39,6 +48,7 @@ const MainSection = styled.div`
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+
 
     h1 {
         padding-bottom: 10px;
