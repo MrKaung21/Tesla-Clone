@@ -7,7 +7,7 @@ const Header = () => {
 
   return (
       <Container>
-          <a>
+          <a style={{width: '25%', paddingLeft: '20px', cursor: "pointer"}}>
               <img src="./images/logo.svg" alt="" />
           </a>
           <Menu>
@@ -47,28 +47,31 @@ const Header = () => {
 export default Header
 
 const Container = styled.div`
+    width: 100%;
     min-height: 60px;
-    padding: 0 20px;
 
     position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
+    
     z-index: 1;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    
 `
 const Menu = styled.div`
+    width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-left: 40px;
 
     p {
       font-weight: 600;
       text-transform: uppercase;
       padding: 0 10px;
+      transition: all 0.3s ease-out;
 
       &:hover {
         background-color: lightgrey;
@@ -81,20 +84,39 @@ const Menu = styled.div`
         display: none;
     }
     
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+        display: none;
+    }
 `
 
 const RightMenu = styled.div`
+    width: 25%;
+    text-align: center;
+    
+
     a {
       padding: 0 10px;
       font-weight: 600;
       text-transform: uppercase;
-      margin-right: 10px;
+      transition: all 0.3s ease-out;
 
       &:hover {
         background-color: lightgrey;
         padding: 10px;
         border-radius: 10px;
       }
+    }
+
+    @media screen and (max-width: 768px) {
+        width: 70%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        text-align: center;
+        
+        a {
+            padding: 0 10px;
+        }
     }
 `
 
@@ -113,18 +135,26 @@ const MobileNav = styled.div`
     transition: transform 0.5s ease-out;
     li {
         padding: 15px 0;
+        margin-left: 40px;
         
         a {
           font-weight: 600;
         }
     }
+
+    @media screen and (min-width: 1024px) {
+        width: 30%;
+    }
 `
 
 const CloseIcon = styled(ClearIcon)`
     cursor: pointer;
+    background: lightgrey;
+    border-radius: 100%;
 `
 const CloseDiv = styled.div`
     
     display: flex;
     justify-content: flex-end;
+    padding: 10px;
 `
