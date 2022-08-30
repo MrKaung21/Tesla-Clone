@@ -37,8 +37,6 @@ const Header = () => {
               <li><a href="#">Used Inventory</a></li>
               <li><a href="#">Trade-In</a></li>
               <li><a href="#">Test Drive</a></li>
-              <li><a href="#">Insurance</a></li>
-              <li><a href="#">Powerwall</a></li>
           </MobileNav>
       </Container>
   )
